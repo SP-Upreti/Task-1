@@ -54,7 +54,6 @@
     padding: 1rem;
 }
 
-
 .circle {
     height: 50px;
     width: 50px;
@@ -64,59 +63,56 @@
 /* components */
 body {
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
+    /* Allow scrolling */
     background: linear-gradient(90deg, rgba(255, 166, 0, 0.704), rgb(245, 0, 143, 0.5), rgba(128, 0, 128, .99));
     padding-top: 1rem !important;
 }
 
 .scroll-container {
-    width: 100dvw;
-    height: 100vh;
+    width: 100vw;
+    height: 90vh;
     padding-top: 1rem;
     overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
+    transform: translateY(-50px);
+    /* Adjust for smoother snapping */
 }
 
 .snap-child {
-    width: 250px;
-    height: 200px;
+    width: 300px;
+    height: 250px;
     scroll-snap-align: start;
     margin: auto;
     border-radius: 25px;
-    transition: all .3s ease-in-out;
-
-    .content-lg {
-        height: 80px;
-        border-radius: 15px;
-        margin-bottom: .5rem;
-    }
-
-    .content-md {
-        height: 30px;
-        width: 180px;
-        border-radius: 5px;
-        margin-bottom: .5rem;
-    }
-
-    .content-sm {
-        height: 20px;
-        width: 140px;
-        border-radius: 5px;
-        margin-bottom: .5rem;
-    }
-
-
+    transition: all 0.3s ease-in-out;
+    margin-top: 2rem !important;
 }
 
-
-
-/* removing scroll bar */
-::-webkit-scrollbar {
-    width: 0;
+.content-lg {
+    height: 180px;
+    border-radius: 15px;
+    margin-bottom: .5rem;
 }
 
+.content-md {
+    height: 30px;
+    width: 180px;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+}
+
+.content-sm {
+    height: 20px;
+    width: 140px;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+}
+
+/* Focused element styles */
 .focus-element {
     transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
 }
 
 .z-10 {
@@ -125,4 +121,9 @@ body {
 
 .gap {
     margin-top: 10rem !important;
+}
+
+/* Removing scrollbar */
+::-webkit-scrollbar {
+    width: 0;
 }
