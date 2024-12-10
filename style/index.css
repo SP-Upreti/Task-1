@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* utility classes */
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
+.my-1 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.my-2 {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.shadow-inset {
+    box-shadow: 2px 2px 5px white inset;
+}
+
+.bg-light {
+    background-color: #ffffff1f;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+
+.circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+/* components */
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(255, 166, 0, 0.704), rgb(245, 0, 143, 0.5), rgba(128, 0, 128, .99));
+    padding-top: 1rem !important;
+}
+
+.scroll-container {
+    width: 100dvw;
+    height: 100vh;
+    padding-top: 1rem;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.snap-child {
+    width: 250px;
+    height: 200px;
+    scroll-snap-align: start;
+    margin: auto;
+    border-radius: 25px;
+    transition: all .3s ease-in-out;
+
+    .content-lg {
+        height: 80px;
+        border-radius: 15px;
+        margin-bottom: .5rem;
+    }
+
+    .content-md {
+        height: 30px;
+        width: 180px;
+        border-radius: 5px;
+        margin-bottom: .5rem;
+    }
+
+    .content-sm {
+        height: 20px;
+        width: 140px;
+        border-radius: 5px;
+        margin-bottom: .5rem;
+    }
+
+
+}
+
+
+
+/* removing scroll bar */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.focus-element {
+    transform: scale(1.2);
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.gap {
+    margin-top: 10rem !important;
+}
